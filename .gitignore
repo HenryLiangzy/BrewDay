@@ -1,0 +1,9 @@
+# for mac system
+.DS_Store
+
+# for database file
+*.db
+
+# for eclipse
+.classpath
+.project
