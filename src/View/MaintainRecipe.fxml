@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="840.0" stylesheets="@mainPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MaintainRecipeController">
+   <children>
+      <SplitPane id="main_background" dividerPositions="0.14214046822742474" layoutX="248.0" layoutY="57.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="750.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane id="title" dividerPositions="0.8181818181818182" layoutX="213.0" layoutY="-53.0" prefHeight="86.0" prefWidth="838.0" styleClass="SplitPane" AnchorPane.bottomAnchor="-20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane id="title" minHeight="0.0" minWidth="0.0" prefHeight="98.0" prefWidth="740.0">
+                           <children>
+                              <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maintain Recipe">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Text>
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button layoutX="10.0" layoutY="6.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toMainPage" prefHeight="65.0" prefWidth="127.0" text="Back" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="6.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="479.0" prefWidth="838.0">
+               <children>
+                  <TableView fx:id="recipeTableView" layoutX="14.0" layoutY="25.0" prefHeight="290.0" prefWidth="326.0">
+                    <columns>
+                      <TableColumn fx:id="recipeID" prefWidth="90.0" text="No." />
+                        <TableColumn fx:id="recipeName" prefWidth="235.0" text="Recipe Name" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="139.0" layoutY="422.0" mnemonicParsing="false" onAction="#toAddRecipe" text="Add Recipe" />
+                  <Button layoutX="344.0" layoutY="422.0" mnemonicParsing="false" onAction="#toDeleteREcipe" text="Delete Recipe" />
+                  <Button layoutX="567.0" layoutY="422.0" mnemonicParsing="false" onAction="#toUpdateRecipe" text="Update Recipe" />
+                  <ListView fx:id="recipeIngredientListView" layoutX="371.0" layoutY="63.0" prefHeight="252.0" prefWidth="455.0" />
+                  <Label id="tablecolumn" layoutX="375.0" layoutY="28.0" text="RecipeName :" />
+                  <Label fx:id="recipeNameLabel" layoutX="525.0" layoutY="27.0" styleClass="Label" text="Label">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label id="tablecolumn" layoutX="609.0" layoutY="28.0" text="LiterOfBeer :" />
+                  <Label fx:id="literOfBeerLabel" layoutX="741.0" layoutY="27.0" styleClass="Label" text="Label" />
+                  <Label id="tablecolumn" layoutX="819.0" layoutY="29.0" text="L" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

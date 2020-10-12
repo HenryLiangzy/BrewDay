@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="831.0" stylesheets="@mainPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainContrller">
+   <children>
+      <Pane layoutX="281.0" layoutY="126.0" prefHeight="600.0" prefWidth="835.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="iv" fitHeight="600.0" fitWidth="878.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/images/beer.jpg" />
+               </image></ImageView>
+            <Button layoutX="166.0" layoutY="21.0" mnemonicParsing="false" onAction="#toMaintainRecipe" text="Maintain Recipe" />
+            <Button layoutX="97.0" layoutY="245.0" mnemonicParsing="false" onAction="#toMaintainEquipment" text="Maintain Equipment" />
+            <Button layoutX="14.0" layoutY="358.0" mnemonicParsing="false" onAction="#toRecommendRecipe" text="Recommend Recipe" />
+            <Button layoutX="166.0" layoutY="496.0" mnemonicParsing="false" onAction="#toWriteNotePage" text="Write Note" />
+         </children>
+      </Pane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="23.0" layoutY="118.0" mnemonicParsing="false" onAction="#toMaintainIngredient" styleClass="Button" text="Maintain Ingredients" />
+   </children>
+</AnchorPane>

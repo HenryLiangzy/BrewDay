@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" stylesheets="@mainPage.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.UpdateRecipeController">
+   <children>
+      <SplitPane dividerPositions="0.14824120603015076" layoutX="92.0" layoutY="14.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane id="title" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="748.0" stylesheets="@mainPage.css">
+               <children>
+                  <Text layoutX="14.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Recipe">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane id="main_background" minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="888.0">
+               <children>
+                  <Button layoutX="291.0" layoutY="420.0" mnemonicParsing="false" onAction="#updateRecipe" text="Update" />
+                  <Button layoutX="543.0" layoutY="420.0" mnemonicParsing="false" onAction="#toMaintainRecipe" text="Cancel" />
+                  <TableView fx:id="recipeTableView" layoutX="20.0" layoutY="43.0" prefHeight="349.0" prefWidth="303.0" AnchorPane.bottomAnchor="112.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="675.0" AnchorPane.topAnchor="43.0">
+                    <columns>
+                      <TableColumn fx:id="recipeID" prefWidth="133.0" text="RecipeID" />
+                        <TableColumn fx:id="recipeName" prefWidth="169.0" text="RecipeName" />
+                    </columns>
+                  </TableView>
+                  <Label id="tablecolumn" layoutX="383.0" layoutY="28.0" text="Recipe Name:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name" layoutX="544.0" layoutY="29.0" styleClass="Label" />
+                  <Label id="tablecolumn" layoutX="648.0" layoutY="28.0" text="Lite Of Beer:" />
+                  <TextField fx:id="liftOfBeer" layoutX="778.0" layoutY="14.0" prefHeight="36.0" prefWidth="106.0" styleClass="Label" />
+                  <Label layoutX="902.0" layoutY="29.0" text="L" />
+                  <Label id="tablecolumn" layoutX="380.0" layoutY="84.0" text="Ingredient value:" />
+                  <TextField fx:id="updateValue" layoutX="570.0" layoutY="71.0" prefHeight="36.0" prefWidth="126.0" styleClass="Label" />
+                  <Button id="change" layoutX="723.0" layoutY="72.0" mnemonicParsing="false" onAction="#changeIngredientValue" prefHeight="43.0" prefWidth="96.0" text="Change">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="recipeIngredientTabelView" layoutX="383.0" layoutY="122.0" prefHeight="269.0" prefWidth="529.0">
+                    <columns>
+                      <TableColumn fx:id="ingredientName" prefWidth="179.0" text="Ingredient Name" />
+                      <TableColumn fx:id="ingredientValue" prefWidth="189.0" text="Ingredient Value" />
+                        <TableColumn fx:id="ingredientUnit" prefWidth="160.0" text="Ingredient Unit" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
